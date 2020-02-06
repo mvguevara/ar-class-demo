@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<!-- A-Frame Text docuentation:
+https://aframe.io/docs/1.0.0/components/text.html
+-->
+<!-- Build a basic scene tut is very helpful: https://aframe.io/docs/1.0.0/guides/building-a-basic-scene.html#sidebar-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Demo</title>
+<!--     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.5/aframe/build/aframe-ar.js"></script> -->
+  <script src="aframe.min.js"></script>
+  <script src="aframe-ar.js"></script>
+</head>
+
+<body>
+  <a-scene embedded="" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+
+    <a-marker type="barcode" value="5">
+      <a-text value="What a beautiful day" scale="5 20 21" position="0 0 0" color="magenta"></a-text>
+
+    </a-marker>
+
+    <a-marker type="barcode" value="3">
+     <a-text value="Hello, World!" scale="3 20 1" zOffset="5"></a-text>
+    </a-marker>
+
+    <a-entity camera=""></a-entity>
+
+  </a-scene>
+
+
+</body>
+
+</html>

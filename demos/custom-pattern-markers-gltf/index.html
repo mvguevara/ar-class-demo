@@ -1,0 +1,36 @@
+<!-- Follow  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Custom Marker</title>
+  <script src="aframe.min.js"></script>
+  <script src="aframe-ar.js"></script>
+</head>
+
+<body>
+  <a-scene embedded="" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+
+<!-- Load gltf in asset management -->
+    <a-assets>
+      <a-asset-item id="creeps" src="assets/creeps.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-marker type="pattern" url="assets/Nike_400.patt">
+
+      <!-- Display gltf from the asset management system. -->
+      <a-gltf-model src="#creeps"></a-gltf-model>
+
+      <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
+      <!-- <a-gltf-model src="assets/creeps.gltf"></a-gltf-model> -->
+
+    </a-marker>
+    <a-entity camera=""></a-entity>
+  </a-scene>
+
+
+</body>
+
+</html>
